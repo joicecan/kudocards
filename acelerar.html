@@ -87,7 +87,7 @@
                 const image = canvas.toDataURL('image/jpg');
                 const link = document.createElement('a');
                 link.href = image;
-                link.appendChild(document.createTextNode('Clique aqui e selecione "Abrir link em uma nova guia" para baixar a imagem'));
+                link.appendChild(document.createTextNode('Clique aqui e selecione "Abrir link em uma nova guia" para salvar a imagem'));
 
                 document.querySelector('#dl-btn').innerHTML = '';
                 document.querySelector('#dl-btn').appendChild(link);
