@@ -86,14 +86,15 @@
             .then(function (canvas) {
                 const image = canvas.toDataURL('image/jpg');
                 const link = document.createElement('a');
-                link.download = 'kudocard.jpg';
                 link.href = image;
-                link.target = '_blank';
                 link.appendChild(document.createTextNode('Clique aqui e selecione abrir em nova aba para baixar a imagem.'));
-                link.click();
 
                 document.querySelector('#dl-btn').innerHTML = '';
                 document.querySelector('#dl-btn').appendChild(link);
+
+                link.download = 'kudocard.jpg';
+                link.target = '_blank';
+                link.click();
             });
     }
 </script>
