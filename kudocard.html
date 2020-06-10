@@ -70,7 +70,9 @@
         <button class="button" a class="btn btn-success" href="javascript:void(0);" onclick="downloadKudoCard();">
             Crie seu Kudo Card
         </button>
+        <br /><br />
     </center>
+    <br /><br />
 </body>
 
 <script>
@@ -83,8 +85,11 @@
                 const image = canvas.toDataURL('image/jpg');
                 const link = document.createElement('a');
                 link.download = 'kudocard.jpg';
-                link.href = image
+                link.href = image;
+                link.target = '_blank';
+                link.appendChild(document.createTextNode('Clique aqui para baixar caso o download não inicie'));
                 link.click();
+                document.querySelector('center').appendChild(link);
             });
     }
 </script>
