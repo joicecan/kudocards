@@ -67,6 +67,8 @@
             </div>
         </form>
 
+        <div id="dl-btn"></div> <br />
+
         <button class="button" a class="btn btn-success" href="javascript:void(0);" onclick="downloadKudoCard();">
             Crie seu Kudo Card
         </button>
@@ -87,9 +89,11 @@
                 link.download = 'kudocard.jpg';
                 link.href = image;
                 link.target = '_blank';
-                link.appendChild(document.createTextNode('Clique aqui para baixar caso o download não inicie'));
+                link.appendChild(document.createTextNode('Clique aqui e selecione abrir em nova aba para baixar a imagem.'));
                 link.click();
-                document.querySelector('center').appendChild(link);
+
+                document.querySelector('#dl-btn').innerHTML = '';
+                document.querySelector('#dl-btn').appendChild(link);
             });
     }
 </script>
