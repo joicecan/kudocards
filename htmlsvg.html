@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/canvg/1.5/canvg.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div ng-app="yourAppName">
+      <div ng-controller="myNoteCtrl">
+        <div id="Screenshot" style="background-color:#fff;">
+          <p>This is it</p>
+          <svg id="circleSvg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="120" style="height: 120px; width: 250px;">
+            <circle id="1" cx="50" cy="50" r="50" fill="#A52A2A"></circle>
+          </svg>
+          <svg id="circleSvg" xmlns:xlink="http://www.w3.org/1999/xlink" width="250" height="120" style="height: 120px; width: 250px;">
+            <circle id="1" cx="50" cy="50" r="50" fill="#fcc"></circle>
+          </svg>
+        </div>
+        <div id="content">
+          <button class="button" id="saveOutput" href="#" ng-click="save()">Take Screenshot</button>
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>
