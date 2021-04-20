@@ -26,7 +26,7 @@
             width: 977;
         }
 
-        #De {
+        #Num1 {
             font-family: Segoe UI;
             color: white;
             font-size: 24px;
@@ -37,17 +37,50 @@
             text-align: left;
         }
 
-        #Para {
+        #Num2 {
             font-family: Segoe UI;
             color: white;
             font-size: 24px;
             position: absolute;
-            margin-left: 265px;
+            margin-left: 60px;
             top: 261px;
-            width: 240;
+            width: 120;
+            text-align: left;
+        }
+        
+        #Num3 {
+            font-family: Segoe UI;
+            color: white;
+            font-size: 24px;
+            position: absolute;
+            margin-left: 60px;
+            top: 261px;
+            width: 120;
             text-align: left;
         }
 
+        #Num4 {
+            font-family: Segoe UI;
+            color: white;
+            font-size: 24px;
+            position: absolute;
+            margin-left: 60px;
+            top: 261px;
+            width: 120;
+            text-align: left;
+        } 
+
+         #Num5 {
+            font-family: Segoe UI;
+            color: white;
+            font-size: 24px;
+            position: absolute;
+            margin-left: 60px;
+            top: 261px;
+            width: 120;
+            text-align: left;
+        } 
+        
         .bg-image {
             width: 650px;
             height: 650px;
@@ -60,17 +93,18 @@
     <center>
         <form class="cf">
             <div class="half left cf bg-image" id="kudocard" style="background: url('./AMAR.PNG');">
-                <div id="De" class="editavel" contenteditable="true" maxlength="15">Seu Nome</div>
-                <div id="Para" class="editavel" contenteditable="true" maxlength="15">Seu colega</div>
-                <div id="Mensagem" class="editavel" contenteditable="true" maxlength="140">Digite sua mensagem aqui
-                </div>
+                <div id="Num1" class="editavel" contenteditable="true" maxlength="15">Pessoa 1</div>
+                <div id="Num2" class="editavel" contenteditable="true" maxlength="15">Pessoa 2</div>
+                <div id="Num3" class="editavel" contenteditable="true" maxlength="15">Pessoa 3</div>
+                <div id="Num4" class="editavel" contenteditable="true" maxlength="15">Pessoa 4</div>
+                <div id="Num5" class="editavel" contenteditable="true" maxlength="15">Pessoa 5</div>
             </div>
         </form>
 
         <div id="dl-btn"></div> <br />
 
         <button class="button" a class="btn btn-success" href="javascript:void(0);" onclick="downloadKudoCard();">
-            Crie seu Kudo Card
+            Baixe seu cartão Eu+1
         </button>
        <br />
     </center>
