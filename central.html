@@ -1,0 +1,82 @@
+<html>
+
+<head>
+    <script src="//html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <style rel="stylesheet">
+        body {
+            color: #375d81;
+            margin: 0px;
+        }
+
+        #De {
+            font-family: Segoe UI;
+            color: #375d81;
+            font-size: 24px;
+            position: absolute;
+            margin-left: 80px;
+            top: 61px;
+            width: 100;
+            text-align: left;
+        }
+
+        #Para {
+            font-family: Segoe UI;
+            color: #375d81;
+            font-size: 24px;
+            position: absolute;
+            margin-left: 265px;
+            top: 261px;
+            width: 240;
+            text-align: left;
+        }
+
+        .bg-image {
+            width: 559px;
+            height: 372px;
+            background-size: cover !important;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <form class="cf">
+            <div class="half left cf bg-image" id="kudocard" style="background: url('./central.png');">
+                <div id="De" class="editavel" contenteditable="true" maxlength="15">a</div>
+                <div id="Para" class="editavel" contenteditable="true" maxlength="15">a</div>
+            </div>
+        </form>
+
+        <div id="dl-btn"></div> <br />
+
+        <button class="button" a class="btn btn-success" href="javascript:void(0);" onclick="downloadKudoCard();">
+            Baixe seu cartão EU + 1
+        </button>
+       <br />
+    </center>
+    <br /><br />
+</body>
+
+<script>
+    function downloadKudoCard() {
+        html2canvas(
+            document.querySelector('#kudocard'),
+            { backgroundColor: null }
+        )
+            .then(function (canvas) {
+                const image = canvas.toDataURL('image/jpg');
+                const link = document.createElement('a');
+                link.href = image;
+                link.appendChild(document.createTextNode('Clique aqui com o botão direito e selecione "Abrir link em uma nova guia" para salvar a imagem'));
+
+                document.querySelector('#dl-btn').innerHTML = '';
+                document.querySelector('#dl-btn').appendChild(link);
+
+                link.download = 'kudocard.jpg';
+                link.target = '_blank';
+                link.click();
+            });
+    }
+</script>
+
+</html>
